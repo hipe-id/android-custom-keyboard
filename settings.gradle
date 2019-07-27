@@ -1,1 +1,1 @@
-include ':app', ':hipekeyboard', ':utils'
+include ':sampleapp', ':hipekeyboard', ':utils'
