@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_gravity="bottom"
+              android:gravity="bottom"
+              android:orientation="vertical">
+
+    <com.zuragan.Hipe Keyboard.view.keyboard.calculator.CalculatorView
+                      android:id="@+id/zuragan_calculator_view"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:visibility="gone"/>
+
+    <com.zuragan.Hipe Keyboard.view.keyboard.autotext.AutoTextSuggestionView
+                      android:id="@+id/zuragan_autotext_suggestion"
+                      android:layout_width="match_parent"
+                      android:layout_height="@dimen/toolbar_menu_height"
+                      android:background="#3B3B43"
+                      android:visibility="gone"/>
+
+    <com.zuragan.Hipe Keyboard.view.keyboard.autotext.AutoTextSettingView
+                      android:id="@+id/zuragan_autotext_setting"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:visibility="gone"/>
+
+    <com.zuragan.Hipe Keyboard.view.keyboard.autotext.AutoTextAddView
+                      android:id="@+id/zuragan_autotext_add"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:visibility="gone"/>
+
+    <com.zuragan.Hipe Keyboard.view.keyboard.ceckOngkir.CekOngkirView
+                      android:id="@+id/check_ongkir"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:visibility="gone"/>
+
+    <include
+            android:id="@+id/check_ongkir_view"
+            layout="@layout/zuragan_cek_ongkir_view"
+            android:visibility="gone"/>
+
+
+    <LinearLayout
+            android:id="@+id/view_toolbar_keyboard_home_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_menu_height"
+            android:background="#3B3B43"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            android:weightSum="5">
+
+        <ImageView
+                android:id="@+id/btn_autotext"
+                android:layout_width="28dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/ic_autoteks_white"
+                android:tint="@color/white"/>
+
+        <ImageView
+                android:id="@+id/btn_inventory"
+                android:layout_width="28dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/ic_tag_white"
+                android:tint="@color/white"/>
+
+        <ImageView
+                android:id="@+id/btn_dasboard"
+                android:layout_width="28dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/ic_z_white"
+                android:tint="@color/white"/>
+
+        <ImageView
+                android:id="@+id/btn_cek_ongkir"
+                android:layout_width="28dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/ic_flybox_white"
+                android:tint="@color/white"/>
+
+        <ImageView
+                android:id="@+id/btn_calculator"
+                android:layout_width="28dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/ic_calc_white"
+                android:tint="@color/white"/>
+
+    </LinearLayout>
+
+    <com.zuragan.Hipe Keyboard.view.keyboard.LatinKeyboardView
+                      android:id="@+id/keyboard"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:backgroundTint="#1C1F28"
+                      android:keyBackground="@drawable/bg_key"
+                      android:keyPreviewLayout="@layout/key_preview_layout"
+                      android:keyPreviewOffset="@dimen/keyPreviewOffset"
+                      android:keyTextColor="@color/white"
+                      android:keyTextSize="@dimen/key_text_size"
+                      android:paddingBottom="6dp"
+                      android:paddingLeft="1dp"
+                      android:paddingRight="1dp"
+                      android:paddingTop="6dp"
+                      android:popupLayout="@layout/keyboard_popup_layout"/>
+
+</LinearLayout>

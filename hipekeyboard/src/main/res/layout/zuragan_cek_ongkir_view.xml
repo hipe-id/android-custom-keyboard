@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:id="@+id/check_ongkir_view"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="wrap_content"
+                                                 android:background="@drawable/bg_header_keyboard_view"
+                                                 android:focusable="true"
+                                                 android:focusableInTouchMode="true"
+                                                 android:orientation="vertical"
+                                                 android:theme="@style/Base.Theme.Zuragan">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <!--fixme height 190dp-->
+        <android.support.v4.widget.NestedScrollView
+                android:id="@+id/nested_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fillViewport="true"
+                android:minHeight="190dp"
+                android:paddingTop="12dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                <!--input weight-->
+                <com.zuragan.Hipe Keyboard.utility.ClearableEditTextView
+                                  android:id="@+id/input_berat"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="@dimen/heigth_edittext"
+                                  android:layout_marginLeft="@dimen/margin_large"
+                                  android:layout_marginRight="@dimen/margin_large"
+                                  android:layout_marginTop="@dimen/margin_small"
+                                  android:background="@drawable/bg_outline_grey"
+                                  android:drawableLeft="@drawable/ic_weight_inactive"
+                                  android:drawableTint="@color/dark_grey"
+                                  android:hint="@string/weight"
+                                  android:inputType="numberDecimal"
+                                  android:padding="@dimen/margin_small"
+                                  android:text="1"
+                                  android:textSize="13sp"
+                                  app:hintTextAppearance="@style/TextAppearance.Zuragan"/>
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="@dimen/margin_medium">
+
+                    <!--input origin-->
+                    <com.zuragan.Hipe Keyboard.utility.ClearableEditTextView
+                                      android:id="@+id/input_asal"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="@dimen/heigth_edittext"
+                                      android:background="@drawable/bg_outline_grey"
+                                      android:drawableLeft="@drawable/ic_boxopen_inactive"
+                                      android:drawableTint="@color/dark_grey"
+                                      android:ellipsize="end"
+                                      android:hint="@string/deliver_from"
+                                      android:imeOptions="flagNoExtractUi|actionSearch"
+                                      android:inputType="textCapSentences"
+                                      android:maxLines="1"
+                                      android:padding="@dimen/margin_small"
+                                      android:textSize="13sp"
+                                      app:hintTextAppearance="@style/TextAppearance.Zuragan"/>
+
+                    <com.zuragan.Hipe Keyboard.utility.CustomSuggestionRecyclerview
+                                      android:id="@+id/rv_sugesstion_origin"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="40dp"
+                                      android:layout_marginTop="44dp"
+                                      android:minHeight="40dp"
+                                      android:visibility="gone"
+                                      tools:visibility="visible"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="@dimen/margin_medium">
+
+                    <!--input destination-->
+                    <com.zuragan.Hipe Keyboard.utility.ClearableEditTextView
+                                      android:id="@+id/input_tujuan"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="@dimen/heigth_edittext"
+                                      android:background="@drawable/bg_outline_grey"
+                                      android:drawableLeft="@drawable/ic_boxclose_inactive"
+                                      android:drawableTint="@color/dark_grey"
+                                      android:ellipsize="end"
+                                      android:hint="@string/deliver_to"
+                                      android:imeOptions="flagNoExtractUi|actionSearch"
+                                      android:inputType="textCapSentences"
+                                      android:maxLines="1"
+                                      android:padding="@dimen/margin_small"
+                                      android:textSize="13sp"
+                                      app:hintTextAppearance="@style/TextAppearance.Zuragan"/>
+
+
+                    <com.zuragan.Hipe Keyboard.utility.CustomSuggestionRecyclerview
+                                      android:id="@+id/rv_sugesstion_destination"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="40dp"
+                                      android:layout_marginTop="44dp"
+                                      android:background="@color/white"
+                                      android:visibility="gone"
+                                      tools:visibility="visible"/>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                        android:id="@+id/container_result_ongkir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:background="@drawable/bg_header_result_ongkir_view"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/checkbox_select_all"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/margin_small"
+                            android:buttonTint="#707070"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginBottom="@dimen/margin_small"
+                            android:layout_marginLeft="@dimen/margin_medium"
+                            android:layout_marginStart="@dimen/margin_medium"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:layout_toEndOf="@id/checkbox_select_all"
+                            android:text="@string/search_result"
+                            android:textColor="@color/white_three"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:background="@color/white"
+                        android:visibility="gone"
+
+                />
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_marginRight="@dimen/margin_large"
+                android:layout_marginTop="@dimen/margin_medium">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btn_back_cek_ongkir"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/bg_circle_line"
+                    android:tint="@color/dark_grey"
+                    app:srcCompat="@drawable/ic_keyboard_backspace_black_24dp"/>
+
+            <FrameLayout
+                    android:id="@+id/btn_search"
+                    android:layout_width="160dp"
+                    android:layout_height="@dimen/height_btn"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:background="@drawable/bg_rounded_dark_grey">
+
+                <TextView
+                        android:id="@+id/lbl_search"
+                        android:layout_width="160dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/check_postal_fee"
+                        android:textColor="@color/white"/>
+
+                <ProgressBar
+                        android:id="@+id/progressbar"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:indeterminateTint="@color/white"
+                        android:visibility="gone"/>
+
+            </FrameLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

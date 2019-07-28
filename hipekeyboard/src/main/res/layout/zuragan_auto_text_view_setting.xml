@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/default_keyboard_window_height"
+              android:background="@drawable/bg_header_keyboard_view"
+              android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/autotext_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:overScrollMode="never"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/back_btn"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/bg_circle_line"
+                android:tint="@color/dark_grey"
+                app:srcCompat="@drawable/ic_keyboard_backspace_black_24dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/quick_reply_title"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/add_btn"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/bg_circle_dark_grey"
+                app:srcCompat="@drawable/ic_add_white_24dp"/>
+    </RelativeLayout>
+</LinearLayout>

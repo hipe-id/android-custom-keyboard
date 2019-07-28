@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp">
+
+        <TextView
+                android:id="@+id/lbl_service_courir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/md_black_1000"
+                android:textSize="13sp"/>
+
+        <TextView
+                android:id="@+id/lbl_est_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/lbl_service_courir"
+                android:text="6-7 Hari"
+                android:textColor="@color/md_black_1000"
+                android:textSize="13sp"/>
+
+        <TextView
+                android:id="@+id/lbl_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/lbl_est_day"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+    </RelativeLayout>
+</LinearLayout>

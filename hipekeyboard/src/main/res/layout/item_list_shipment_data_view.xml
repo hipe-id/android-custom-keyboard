@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/shipmentdatarv_timestamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/md_grey_200"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/col_small"
+            android:paddingLeft="@dimen/col_medium"
+            android:paddingStart="@dimen/col_medium"
+            android:paddingTop="@dimen/col_small"
+            android:text="Sunday, 10 Dec 2017"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/md_black_1000"/>
+
+    <LinearLayout
+            android:id="@+id/shipmentdatarv_llContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/col_small"
+            android:paddingEnd="@dimen/col_medium"
+            android:paddingLeft="@dimen/col_medium"
+            android:paddingRight="@dimen/col_medium"
+            android:paddingStart="@dimen/col_medium"
+            android:paddingTop="@dimen/col_small"
+            android:weightSum="2">
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/shipmentdatarv_cust_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="John Doe"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+
+            <TextView
+                    android:id="@+id/shipmentdatarv_cust_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="089636606525"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+
+            <TextView
+                    android:id="@+id/shipmentdatarv_soid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#SO-0018"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Rp"/>
+
+                <TextView
+                        android:id="@+id/shipmentdatarv_pricetag"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/col_small"
+                        android:paddingStart="@dimen/col_small"
+                        android:text="1.500.000"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="AWAIT SHIPMENT"
+                    android:textColor="@color/color_primary_light"
+                    android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+            android:id="@+id/shipmentdatarv_viewBottom"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/col_medium"
+            android:layout_marginLeft="@dimen/col_medium"
+            android:layout_marginRight="@dimen/col_medium"
+            android:layout_marginStart="@dimen/col_medium"
+            android:background="@color/md_grey_300"/>
+
+</LinearLayout>

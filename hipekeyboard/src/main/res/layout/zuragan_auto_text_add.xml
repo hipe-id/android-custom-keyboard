@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/default_keyboard_window_height"
+              android:background="@drawable/bg_header_keyboard_view_white"
+              android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+        <com.zuragan.Hipe Keyboard.utility.ClearableEditTextView
+                          android:id="@+id/shortcut_txt"
+                          android:layout_width="match_parent"
+                          android:layout_height="@dimen/heigth_edittext"
+                          android:layout_marginBottom="@dimen/margin_medium"
+                          android:background="@drawable/bg_outline_grey"
+                          android:digits="abcdefghijklmnopqrstuvwxyz"
+                          android:drawableLeft="@drawable/ic_spellcheck_grey_18dp"
+                          android:drawablePadding="@dimen/margin_medium"
+                          android:drawableTint="@color/dark_grey"
+                          android:gravity="center_vertical"
+                          android:hint="@string/shortcut"
+                          android:inputType="text"
+                          android:paddingBottom="@dimen/margin_medium"
+                          android:paddingLeft="@dimen/margin_large"
+                          android:paddingRight="@dimen/margin_large"
+                          android:paddingTop="@dimen/margin_medium"
+                          android:textAllCaps="false"
+                          android:textSize="@dimen/auto_text_add_text_size"
+                          app:enableCursorMove="true"
+                          app:hintTextAppearance="@style/TextAppearance.Zuragan"/>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_outline_grey"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/margin_large"
+                android:paddingLeft="@dimen/margin_large"
+                android:paddingRight="@dimen/margin_medium"
+                android:paddingTop="@dimen/margin_large">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/auto_text_add_icon_margin_top"
+                    android:src="@drawable/ic_question_answer_grey_18dp"
+                    android:tint="@color/dark_grey"/>
+
+            <com.zuragan.Hipe Keyboard.utility.ClearableEditTextView
+                              android:id="@+id/content_txt"
+                              android:layout_width="0dp"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1"
+                              android:background="@android:color/transparent"
+                              android:drawableTint="@color/dark_grey"
+                              android:gravity="start|top"
+                              android:hint="@string/description"
+                              android:inputType="text|textMultiLine"
+                              android:paddingLeft="8dp"
+                              android:singleLine="false"
+                              android:textSize="@dimen/auto_text_add_text_size"
+                              app:enableCursorMove="true"
+                              app:hintTextAppearance="@style/TextAppearance.Zuragan"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/back_btn"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:background="@drawable/bg_circle_line"
+                android:tint="@color/dark_grey"
+                app:srcCompat="@drawable/ic_keyboard_backspace_black_24dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/done_btn"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/height_btn"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_rounded_dark_grey"
+                android:gravity="center"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                android:textSize="11sp"/>
+    </RelativeLayout>
+</LinearLayout>
