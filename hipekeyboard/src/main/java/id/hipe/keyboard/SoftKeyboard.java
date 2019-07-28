@@ -33,14 +33,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
-import com.zuragan.shopkeepr.data.api.model.AutoTextWord;
-import com.zuragan.shopkeepr.utility.AnalyticUtils;
-import com.zuragan.shopkeepr.utility.PreferenceUtils;
-import com.zuragan.shopkeepr.view.keyboard.autotext.AutoTextAddView;
-import com.zuragan.shopkeepr.view.keyboard.autotext.AutoTextSettingView;
-import com.zuragan.shopkeepr.view.keyboard.autotext.AutoTextSuggestionView;
-import com.zuragan.shopkeepr.view.keyboard.calculator.CalculatorView;
-import com.zuragan.shopkeepr.view.keyboard.ceckOngkir.CekOngkirView;
+import id.hipe.keyboard.calculator.CalculatorView;
+import id.hipe.utils.AnalyticUtils;
+import id.hipe.utils.PreferenceUtils;
 import timber.log.Timber;
 
 import java.util.List;
@@ -53,9 +48,7 @@ import java.util.List;
  * be fleshed out as appropriate.
  */
 public class SoftKeyboard extends InputMethodService
-        implements KeyboardView.OnKeyboardActionListener, CalculatorView.CalculatorListener,
-        CekOngkirView.checkOngkirCallback, AutoTextAddView.Callback,
-        AutoTextSettingView.Callback, AutoTextSuggestionView.Callback {
+        implements KeyboardView.OnKeyboardActionListener, CalculatorView.CalculatorListener {
 
     /**
      * This boolean indicates the optional example code for performing
@@ -71,10 +64,6 @@ public class SoftKeyboard extends InputMethodService
     long spacePast;
     boolean haltKeyboard = false;
     private CalculatorView calculatorView;
-    private CekOngkirView cekOngkirView;
-    private AutoTextSettingView autoTextSettingView;
-    private AutoTextAddView autoTextAddView;
-    private AutoTextSuggestionView autoTextSuggestionView;
     private LinearLayout toolbarHomeKeyboard;
     private InputMethodManager mInputMethodManager;
     private LatinKeyboardView mInputView;
@@ -117,8 +106,6 @@ public class SoftKeyboard extends InputMethodService
         mSymbolsShiftedKeyboard = new LatinKeyboard(this, R.xml.symbols_shift);
         mNumbersKeyboard = new LatinKeyboard(this, R.xml.numbers);
         mPhoneKeyboard = new LatinKeyboard(this, R.xml.phone);
-        cekOngkirView = new CekOngkirView(SoftKeyboard.this);
-        cekOngkirView.clearText();
     }
 
     /*
@@ -423,13 +410,7 @@ public class SoftKeyboard extends InputMethodService
             int caps = 0;
             EditorInfo ei = getCurrentInputEditorInfo();
             if (ei != null && ei.inputType != InputType.TYPE_NULL) {
-                if (autoTextAddView.isFocused()) {
-                    caps = autoTextAddView.getCapsMode(attr);
-                } else if (cekOngkirView.isFocused()) {
-                    caps = cekOngkirView.getCapsMode(attr);
-                } else {
-                    caps = getCurrentInputConnection().getCursorCapsMode(attr.inputType);
-                }
+                caps = getCurrentInputConnection().getCursorCapsMode(attr.inputType);
             }
             mInputView.setShifted(mCapsLock || caps != 0);
 
@@ -481,36 +462,10 @@ public class SoftKeyboard extends InputMethodService
         mInputView = view.findViewById(R.id.keyboard);
         mInputView.setOnKeyboardActionListener(this);
 
-        cekOngkirView = new CekOngkirView(SoftKeyboard.this);
-        cekOngkirView = view.findViewById(R.id.check_ongkir);
-        cekOngkirView.setListener(SoftKeyboard.this);
-        cekOngkirView.clearText();
-
-        // call view cek ongkir
-        ImageView btnCekOngkir = view.findViewById(R.id.btn_cek_ongkir);
-        btnCekOngkir.setOnClickListener(view15 -> {
-            toolbarHomeKeyboard.setVisibility(View.GONE);
-            cekOngkirView.show();
-            cekOngkirView.setHeight(CekOngkirView.MIN_HEIGHT);
-            cekOngkirView.setDefaultOriginLocation();
-        });
-
         //initial view calculator
         calculatorView = new CalculatorView(this);
-        calculatorView = view.findViewById(R.id.zuragan_calculator_view);
+        calculatorView = view.findViewById(R.id.hipe_calculator_view);
         toolbarHomeKeyboard = view.findViewById(R.id.view_toolbar_keyboard_home_view);
-
-        autoTextSettingView = new AutoTextSettingView(this);
-        autoTextSettingView = view.findViewById(R.id.zuragan_autotext_setting);
-        autoTextSettingView.setCallback(this);
-
-        autoTextAddView = new AutoTextAddView(this);
-        autoTextAddView = view.findViewById(R.id.zuragan_autotext_add);
-        autoTextAddView.setCallback(this);
-
-        autoTextSuggestionView = new AutoTextSuggestionView(this);
-        autoTextSuggestionView = view.findViewById(R.id.zuragan_autotext_suggestion);
-        autoTextSuggestionView.setCallback(this);
 
         //initial view dasboard
         ImageView btnDasboard = view.findViewById(R.id.btn_dasboard);
@@ -531,7 +486,6 @@ public class SoftKeyboard extends InputMethodService
         //call view autotext
         ImageView btnAutoText = view.findViewById(R.id.btn_autotext);
         btnAutoText.setOnClickListener(view12 -> {
-            autoTextSettingView.show();
             toolbarHomeKeyboard.setVisibility(View.GONE);
             mInputView.setVisibility(View.GONE);
         });
@@ -641,13 +595,7 @@ public class SoftKeyboard extends InputMethodService
                 AnalyticUtils.getInstance(this).keyboardChange(imei);
             }
         } else if (primaryCode == Keyboard.KEYCODE_DELETE) {
-            if (autoTextAddView.isFocused()) {
-                handleBackspaceEdit(autoTextAddView.getEditText());
-            } else if (cekOngkirView.isFocused()) {
-                handleBackspaceEdit(cekOngkirView.getEditText());
-            } else {
-                handleBackspace();
-            }
+            handleBackspace();
         } else if (primaryCode == Keyboard.KEYCODE_SHIFT) {
             handleShift();
         } else if (primaryCode == Keyboard.KEYCODE_CANCEL) {
@@ -710,15 +658,8 @@ public class SoftKeyboard extends InputMethodService
         final int length = suggestionTemp.length();
         if (length > 1) {
             suggestionTemp.delete(length - 1, length);
-            if (suggestionTemp.charAt(0) == '\\') {
-                autoTextSuggestionView.refreshData(suggestionTemp.toString(),
-                        AutoTextSuggestionView.DEFAULT_LIMIT);
-            }
         } else if (length > 0) {
             suggestionTemp.setLength(0);
-            if (autoTextSuggestionView.isShowing()) {
-                autoTextSuggestionView.hide();
-            }
         }
         keyDownUp(KeyEvent.KEYCODE_DEL);
         updateShiftKeyState(getCurrentInputEditorInfo());
@@ -790,21 +731,10 @@ public class SoftKeyboard extends InputMethodService
             }
         }
 
-        if (autoTextAddView.isFocused()) {
-            autoTextAddView.insert(primaryCode);
-        } else if (cekOngkirView.isFocused()) {
-            cekOngkirView.insert(primaryCode);
-        } else {
-            StringBuilder text = new StringBuilder();
+        StringBuilder text = new StringBuilder();
             text.append((char) primaryCode);
             suggestionTemp.append((char) primaryCode);
-            if (suggestionTemp.charAt(0) == '\\' && suggestionTemp.length() > 0) {
-                autoTextSuggestionView.refreshData(suggestionTemp.toString(),
-                        AutoTextSuggestionView.DEFAULT_LIMIT);
-            }
-
             getCurrentInputConnection().commitText(text, 1);
-        }
 
         if (isAlphabet(primaryCode) && mPredictionOn) {
             updateShiftKeyState(getCurrentInputEditorInfo());
@@ -931,121 +861,5 @@ public class SoftKeyboard extends InputMethodService
         input.append(result);
         getCurrentInputConnection().commitText(input, input.length());
         onClickBackFromCalculator();
-    }
-
-    @Override
-    public void onShowKeyboard() {
-        mCurKeyboard = mQwertyKeyboard;
-        setLatinKeyboard(mCurKeyboard);
-        mInputView.setVisibility(View.VISIBLE);
-    }
-
-    @Override
-    public void onShowKeyboardNumber() {
-        mCurKeyboard = mNumbersKeyboard;
-        setLatinKeyboard(mCurKeyboard);
-        mInputView.setVisibility(View.VISIBLE);
-    }
-
-    @Override
-    public void onShowResult() {
-        mInputView.setVisibility(View.GONE);
-        int limit = 10;
-        int count = PreferenceUtils.getDataIntFromSP(this, PreferenceUtils.COUNT_CEK_ONGKIR, 0) + 1;
-        if (count != limit && count < 12) {
-            PreferenceUtils.setDataIntTOSP(this, PreferenceUtils.COUNT_CEK_ONGKIR, count);
-        } else if (count == limit) {
-            RatePopup.showRating(SoftKeyboard.this, mInputView);
-        }
-    }
-
-    @Override
-    public void onPasteClipBoard(String clipboard) {
-        Timber.d("paste clipeboard %s", clipboard);
-        pasteText(clipboard, false);
-    }
-
-    @Override
-    public void onBackFromCheckOngkir() {
-        clearComposing();
-        cekOngkirView.setVisibility(View.GONE);
-        toolbarHomeKeyboard.setVisibility(View.VISIBLE);
-        if (mInputView.getVisibility() == View.GONE) {
-            mInputView.setVisibility(View.VISIBLE);
-        } else {
-            mCurKeyboard = mQwertyKeyboard;
-            setLatinKeyboard(mCurKeyboard);
-            mInputView.setVisibility(View.VISIBLE);
-        }
-    }
-
-    @Override
-    public void onAutoTextAddBackPress() {
-        autoTextAddView.hide();
-        autoTextSettingView.show();
-        mInputView.setVisibility(View.GONE);
-    }
-
-    @Override
-    public void onAutoTextDonePress() {
-        clearComposing();
-        autoTextAddView.hide();
-        mInputView.setVisibility(View.GONE);
-        autoTextSettingView.show();
-        autoTextSettingView.refreshData();
-    }
-
-    @Override
-    public void onShortcutFocus(boolean focus) {
-        mInputView.setShifted(!focus);
-    }
-
-    @Override
-    public void onAddShortcut() {
-        autoTextAddView.show();
-        autoTextSettingView.hide();
-        mInputView.setVisibility(View.VISIBLE);
-    }
-
-    @Override
-    public void onBackSetting() {
-        clearComposing();
-        autoTextSettingView.hide();
-        mInputView.setVisibility(View.VISIBLE);
-        toolbarHomeKeyboard.setVisibility(View.VISIBLE);
-    }
-
-    @Override
-    public void onEditShortcut(AutoTextWord item) {
-        autoTextAddView.show(item);
-        autoTextSettingView.hide();
-        mInputView.setVisibility(View.VISIBLE);
-    }
-
-    @Override
-    public void onAutoTextClick(AutoTextWord text) {
-        if (text != null) {
-            pasteText(text.getContent(), true);
-        }
-    }
-
-    @Override
-    public void onAutoTextSuggestionClick(String text) {
-        //handle buat autotext di awal bukan ditengah text lain
-//        if (getCurrentInputConnection().getTextBeforeCursor(0, 0)
-//                == null) {
-//            clearComposing();
-//            clearText();
-//        }
-        clearComposing();
-        clearText();
-        pasteText(text, false);
-        autoTextSuggestionView.hide();
-        toolbarHomeKeyboard.setVisibility(View.VISIBLE);
-    }
-
-    @Override
-    public void onAutoTextSuggestionShow(boolean isShow) {
-        toolbarHomeKeyboard.setVisibility(isShow ? View.GONE : View.VISIBLE);
     }
 }

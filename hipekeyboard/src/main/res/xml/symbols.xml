@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+/*
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+--><!--android:horizontalGap="3px"-->
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+          android:horizontalGap="@dimen/key_horizontal_gap"
+          android:keyHeight="@dimen/key_height_big"
+          android:keyWidth="@dimen/key_width_medium"
+          android:verticalGap="@dimen/key_vertical_gap_small">
+    <Row>
+        <Key
+                android:keyEdgeFlags="left"
+                android:keyLabel="#"/>
+        <Key
+                android:keyLabel="$"
+                android:keyWidth="@dimen/key_width_small"/>
+        <Key
+                android:keyLabel="&amp;"
+                android:keyWidth="@dimen/key_width_small"/>
+        <Key
+                android:keyLabel="_"
+                android:keyWidth="@dimen/key_width_small"/>
+        <Key
+                android:keyLabel="-"
+                android:keyWidth="@dimen/key_width_small"/>
+        <Key android:keyLabel="1"/>
+        <Key android:keyLabel="2"/>
+        <Key android:keyLabel="3"/>
+        <Key
+                android:keyEdgeFlags="right"
+                android:keyLabel="\?"/>
+    </Row>
+
+    <Row>
+        <Key
+                android:keyEdgeFlags="left"
+                android:keyLabel="\@"/>
+        <Key
+                android:keyLabel="("
+                android:keyWidth="@dimen/key_width_small"/>
+        <Key
+                android:keyLabel=")"
+                android:keyWidth="@dimen/key_width_small"/>
+        <Key
+                android:keyLabel="="
+                android:keyWidth="@dimen/key_width_small"/>
+        <Key
+                android:keyLabel="+"
+                android:keyWidth="@dimen/key_width_small"/>
+        <Key android:keyLabel="4"/>
+        <Key android:keyLabel="5"/>
+        <Key android:keyLabel="6"/>
+        <Key
+                android:keyEdgeFlags="right"
+                android:keyLabel="!"/>
+    </Row>
+
+    <Row>
+        <Key
+                android:codes="-1"
+                android:isModifier="true"
+                android:isSticky="true"
+                android:keyEdgeFlags="left"
+                android:keyLabel="{&amp;="/>
+        <Key
+                android:keyLabel="\'"
+                android:keyWidth="@dimen/key_width_small"/>
+        <Key
+                android:keyLabel=":"
+                android:keyWidth="@dimen/key_width_small"/>
+        <Key
+                android:keyLabel="%"
+                android:keyWidth="@dimen/key_width_small"/>
+        <Key
+                android:keyLabel="/"
+                android:keyWidth="@dimen/key_width_small"/>
+        <Key android:keyLabel="7"/>
+        <Key android:keyLabel="8"/>
+        <Key android:keyLabel="9"/>
+        <Key
+                android:codes="-5"
+                android:isRepeatable="true"
+                android:keyEdgeFlags="right"
+                android:keyIcon="@drawable/ic_delete_white"/>
+    </Row>
+
+    <Row android:rowEdgeFlags="bottom">
+        <Key
+                android:background="@color/md_yellow_500"
+                android:codes="-2"
+                android:keyEdgeFlags="left"
+                android:keyLabel="abc"/>
+
+        <Key
+                android:keyLabel="&quot;"
+                android:keyWidth="@dimen/key_width_small"/>
+        <!--
+            android:codes: -101 is not a framework-defined key code but a key code that is
+            privately defined in com.example.android.softkeyboard.LatinKeyboardView.
+        -->
+        <!--<Key-->
+        <!--android:codes="-101"-->
+        <!--android:keyIcon="@drawable/ic_language_24dp" />-->
+
+        <Key
+                android:codes="32"
+                android:isRepeatable="true"
+                android:keyIcon="@drawable/ic_space_bar_white_36dp"
+                android:keyWidth="@dimen/key_space_width"/>
+
+        <Key
+                android:keyLabel="*"
+                android:keyWidth="@dimen/key_width_small"/>
+
+        <Key android:keyLabel=","/>
+        <Key android:keyLabel="0"/>
+
+        <Key
+                android:isModifier="true"
+                android:keyLabel="."/>
+        <Key
+                android:codes="10"
+                android:keyEdgeFlags="right"
+                android:keyIcon="@drawable/ic_enter_white"/>
+    </Row>
+</Keyboard>

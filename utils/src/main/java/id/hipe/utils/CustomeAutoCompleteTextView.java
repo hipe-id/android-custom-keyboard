@@ -5,8 +5,9 @@ import android.text.InputType;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageButton;
+import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
 
-public class CustomeAutoCompleteTextView extends android.support.v7.widget.AppCompatAutoCompleteTextView {
+public class CustomeAutoCompleteTextView extends AppCompatAutoCompleteTextView {
 
     private ImageButton mClearButton;
 

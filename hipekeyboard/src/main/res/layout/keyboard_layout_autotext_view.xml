@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <id.hipe.keyboard.LatinKeyboardView
+                      android:id="@+id/keyboard"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentBottom="true"
+                      android:background="@drawable/kb_bg_8"
+                      android:keyBackground="@drawable/key_bg_fill_white"
+                      android:keyPreviewLayout="@layout/key_preview_layout"
+                      android:keyPreviewOffset="@dimen/keyPreviewOffset"
+                      android:keyTextColor="@color/white"
+                      android:popupLayout="@layout/keyboard_popup_layout"/>
+
+</LinearLayout>

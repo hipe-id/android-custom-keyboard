@@ -1,12 +1,8 @@
 package id.hipe.keyboard;
 
 import android.content.Context;
-import com.zuragan.shopkeepr.base.BasePresenter;
-import com.zuragan.shopkeepr.data.api.RequestManager;
-import com.zuragan.shopkeepr.di.ActivityContext;
+import id.hipe.base.BasePresenter;
 import io.reactivex.disposables.CompositeDisposable;
-
-import javax.inject.Inject;
 
 /**
  * Created by
@@ -16,13 +12,11 @@ import javax.inject.Inject;
  */
 public class SoftKeyboardPresenter extends BasePresenter<ISoftKeyboardView> {
 
-    private RequestManager requestManager;
     private Context context;
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
 
-    @Inject
-    public SoftKeyboardPresenter(RequestManager requestManager, @ActivityContext Context context) {
-        this.requestManager = requestManager;
+
+    public SoftKeyboardPresenter(Context context) {
         this.compositeDisposable = new CompositeDisposable();
         this.context = context;
     }
@@ -39,9 +33,5 @@ public class SoftKeyboardPresenter extends BasePresenter<ISoftKeyboardView> {
         if (compositeDisposable != null && !compositeDisposable.isDisposed()) {
             compositeDisposable.clear();
         }
-    }
-
-    public void checkOngkir() {
-        // TODO: 09/05/18 get check ongkir from api
     }
 }

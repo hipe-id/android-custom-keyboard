@@ -1,8 +1,8 @@
 package id.hipe.utils;
 
 import android.graphics.Rect;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import androidx.appcompat.widget.RecyclerView;
 
 /**
  * Created by rochmanz on 27/03/18.

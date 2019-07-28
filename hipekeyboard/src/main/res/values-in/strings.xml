@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_go_key">Go</string>
+    <string name="label_next_key">Next</string>
+    <string name="label_send_key">Send</string>
+
+    <!-- Titles for ImePreference -->
+    <string name="settings_name">Hipe Keyboard Pengaturan Keyboard</string>
+    <string name="language_selection_title">Masukan Bahasa</string>
+    <string name="select_language">Pilih Masukan Bahasa</string>
+
+    <string name="sound">Suara Tombol</string>
+
+    <string name="enable_in_settings">AKTIFKAN DI PENGATURAN</string>
+    <string name="add_languages">TAMBAH BAHASA</string>
+    <string name="choose_input_method">PILIH MASUKAN BAHASA</string>
+    <string name="choose_theme">PILIH TEMA</string>
+    <string name="choose_theme_title">Tema Keyboard</string>
+
+    <!-- dialogs -->
+    <string name="error_title_dialog">Kesalahan</string>
+    <string name="cancel_text_dialog">Batal</string>
+
+
+    <!-- buttons -->
+    <string name="btn_word_ok">OK</string>
+    <string name="btn_word_cancel">BATAL</string>
+    <string name="btn_word_yes">YA</string>
+    <string name="btn_word_no">TIDAK</string>
+    <string name="btn_word_save">SIMPAN</string>
+    <string name="btn_word_done">SELESAI</string>
+    <string name="btn_word_back">KEMBALI</string>
+    <string name="btn_word_skip">LEWATI</string>
+    <string name="btn_word_love">SUKA</string>
+
+    <!--Titles-->
+    <string name="quick_reply_title">Quick Reply</string>
+
+    <!--Menus-->
+    <string name="edit">Ubah</string>
+    <string name="delete">Hapus</string>
+    <string name="next">LANJUT</string>
+    <string name="save">SIMPAN</string>
+
+    <!--Alert-->
+    <string name="shortcut_already_exist">Shortcut sudah digunakan</string>
+    <string name="sure_want_to_delete">Apakah Anda yakin untuk menghapus?</string>
+    <string name="enable_keyboard_first">Mohon aktifkan keyboard terlebih dahulu</string>
+    <string name="empty_field">Kolom wajib diisi</string>
+    <string name="format_not_compatible">Format tidak sesuai</string>
+    <string name="delete_confirm">Anda yakin akan menghapus?</string>
+    <string name="title_update">Perbarui Versi</string>
+    <string name="lbl_update">Perbarui</string>
+    <string name="on_update_needed">Aplikasi Hipe Keyboard anda membutuhkan pembaruan untuk dapat digunakan, segera
+        lakukan pembaruan
+    </string>
+    <string name="new_update_released">Aplikasi Hipe Keyboard versi terbaru telah tersedia, lakukan pembaruan versi
+        untuk dapat menikmati fitur terbaru
+    </string>
+    <string name="popup_rating">Suka dengan aplikasi Hipe Keyboard?</string>
+    <string name="popup_comment">Kami ingin dengar kesan dan masukkan dari kamu</string>
+    <string name="popup_hint">Tulis komentar disini</string>
+    <string name="popup_toast_rate">Mohon beri kami rating di playstore</string>
+    <string name="popup_toast_comment">Komentar kosong</string>
+
+    <!--Cek Ongkir-->
+    <string name="weight">Berat(Kg)*</string>
+    <string name="deliver_from">Kota Asal Pengiriman*</string>
+    <string name="deliver_to">Kota Tujuan Pengiriman*</string>
+    <string name="weight_greater">Input berat harus lebih dari 0</string>
+    <string name="empty_input_weight">input berat kosong</string>
+    <string name="empty_input_deliver_from">Lengkapi kota asal pengiriman</string>
+    <string name="empty_input_deliver_to">Lengkapi kota tujuan pengiriman</string>
+    <string name="success_copy_postal_fee">Ongkir Berhasil di Salin</string>
+    <string name="server_down">Server sedang sibuk, coba beberapa saat lagi</string>
+
+    <!--general-->
+    <string name="shortcut">Shortcut</string>
+    <string name="description">Deskripsi</string>
+    <string name="search_result">Hasil Pencarian</string>
+    <string name="check_postal_fee">Cek Ongkir</string>
+    <string name="copy">Salin</string>
+
+    <!--onboarding-->
+    <string name="title_onboarding_1">Keyboard Sakti</string>
+    <string name="desc_onboarding_1">jualan online jadi praktis</string>
+    <string name="title_onboarding_2">Bisa Cek Ongkir</string>
+    <string name="desc_onboarding_2">sambil jualan</string>
+    <string name="title_onboarding_3">Balas Chat Cepat</string>
+    <string name="desc_onboarding_3">tanpa ngetik berulang</string>
+    <string name="title_onboarding_4">Pakai Kalkulator</string>
+    <string name="desc_onboarding_4">sambil chatting</string>
+    <string name="title_onboarding_5">Keyboard Sakti</string>
+    <string name="desc_onboarding_5">jualan online</string>
+
+
+    <!--intro setting-->
+    <string name="title_setting_1">Aktifkan Keyboard Hipe Keyboard</string>
+    <string name="desc_setting_1">Kamu akan diarahkan ke halaman pengaturan. Tandai Hipe Keyboard sehingga tampak
+        seperti pada gambar.
+    </string>
+    <string name="lbl_button_setting_1">Aktifkan Sekarang</string>
+    <string name="title_setting_2">Aktifkan Keyboard Hipe Keyboard</string>
+    <string name="desc_setting_2">Selanjutnya pilih OK pada layar peringatan untuk mengizinkan penggunakan keyboard dari
+        pihak ketiga. Jangan takut, Hipe Keyboard tidak akan merekam apapun yang Anda ketik.
+    </string>
+    <string name="lbl_button_setting_2">Aktifkan Sekarang</string>
+    <string name="title_setting_3">Pilih Keyboard Hipe Keyboard</string>
+    <string name="desc_setting_3">Langkah terakhir. Pilih Keyboard Hipe Keyboard sebagai keyboard utama di smartphone
+        kamu dan mulailah chat dengan pelanggan.
+    </string>
+    <string name="lbl_button_setting_3">Pilih Input Method</string>
+
+    <!--Dashboard-->
+    <string-array name="dashboard_menus">
+        <item>Pengaturan</item>
+        <item>Review Kami</item>
+        <item>Petunjuk</item>
+        <item>FAQ</item>
+        <item>Hubungi Kami</item>
+    </string-array>
+</resources>

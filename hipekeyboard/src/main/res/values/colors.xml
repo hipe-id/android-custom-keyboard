@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="color_primary">#278FDF</color>
+    <color name="color_primary_light">#469EC4</color>
+    <color name="color_accent">#2674CE</color>
+    <color name="color_accent_light">#1c8ad9</color>
+    <color name="ripple_color">#33ffffff</color>
+    <color name="colorAccent2">#1D89DB</color>
+    <color name="color_grey">#d0d0d0</color>
+    <color name="color_black">#000000</color>
+    <color name="color_grey_bg">#E9E9E9</color>
+
+    <!--keyboard-->
+    <!--<color name="btn_keyboard_color_backgorund">#333A40</color>-->
+    <color name="btn_keyboard_color_backgorund">#32393F</color>
+    <color name="keyboard_color_backgorund">#32393F</color>
+    <color name="keyboard_bg">#1F1D1E</color>
+
+    <!--popup ongkir-->
+    <color name="green_popup_view">#46AC35</color>
+
+
+    <!-- Suggested bar colors -->
+    <color name="candidate_normal">#FF000000</color>
+    <color name="candidate_recommended">#e35900</color>
+    <color name="candidate_other">#ff808080</color>
+    <color name="candidate_background">#bbffffff</color>
+
+    <!-- Default theme colors -->
+    <color name="keyboardBackgroundColor">#eaeded</color>
+    <color name="popupBackgroundColor">#c6c6c6</color>
+    <color name="keyPreviewColor">#D5DBDB</color>
+    <color name="keyTextColor">#4B4B4B</color>
+    <color name="PopupKeyTextColor">#757575</color>
+    <color name="line_grey_color">#CBCBCB</color>
+
+    <color name="white">#ffffff</color>
+    <color name="white_50">#40FFFFFF</color>
+    <color name="candidateViewColor">#dbdada</color>
+
+    <!--cek ongkir-->
+    <color name="dark_grey">#3B3B43</color>
+    <color name="dark_grey_two">#2A2A2A</color>
+
+    <!--calculator-->
+    <color name="white_three">#FCFCFC</color>
+    <color name="white_two">#E6E6E6</color>
+    <color name="grey">#91969A</color>
+    <color name="grey_two">#E6E6E6</color>
+    <color name="grey_three">#F1F1F1</color>
+    <color name="text_label_color">#6E6E6E</color>
+
+    <color name="red">#FF0072</color>
+</resources>

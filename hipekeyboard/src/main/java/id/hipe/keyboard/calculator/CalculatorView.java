@@ -3,19 +3,19 @@ package id.hipe.keyboard.calculator;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.annotation.Nullable;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import com.zuragan.shopkeepr.R;
-import com.zuragan.shopkeepr.utility.AnalyticUtils;
-import com.zuragan.shopkeepr.utility.PreferenceUtils;
+import id.hipe.keyboard.R;
+import id.hipe.utils.AnalyticUtils;
+import id.hipe.utils.PreferenceUtils;
 
 /**
  * Created by
@@ -48,7 +48,7 @@ public class CalculatorView extends LinearLayout {
 
     private void initViews() {
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.zuragan_calculator_dark_view, this, true);
+        View view = inflater.inflate(R.layout.hipe_calculator_dark_view, this, true);
         ButterKnife.bind(view);
     }
 

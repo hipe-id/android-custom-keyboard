@@ -1,15 +1,15 @@
 package id.hipe.keyboard;
 
 import android.content.Context;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Filter;
 import android.widget.TextView;
-import com.zuragan.shopkeepr.data.api.model.Lokasi;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+import id.hipe.data.api.model.Lokasi;
 import timber.log.Timber;
 
 import java.util.ArrayList;

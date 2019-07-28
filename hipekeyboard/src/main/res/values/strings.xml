@@ -1,3 +1,134 @@
 <resources>
     <string name="app_name">Hipe Keyboard</string>
+    <string name="keyboard_label">Hipe Keyboard</string>
+    <string name="mix_panel_token">df5327aaa4031886b2083e31598562e3</string>
+
+    <!-- Symbols that are commonly considered word separators in this language -->
+    <string name="word_separators">\u0020.,;:!?\n()[]*&amp;@{}/&lt;&gt;_+=|&quot;</string>
+
+    <!-- Labels on soft keys -->
+    <string name="label_go_key">Go</string>
+    <string name="label_next_key">Next</string>
+    <string name="label_send_key">Send</string>
+
+    <!-- Labels for subtype -->
+    <string name="label_subtype_generic">%s</string>
+
+    <!-- Titles for ImePreference -->
+    <string name="settings_name">Hipe Keyboard Keyboard Settings</string>
+    <string name="language_selection_title">Input languages</string>
+    <string name="select_language">Select input languages</string>
+
+    <string name="sound">Sound on keypress</string>
+
+    <string name="enable_in_settings">ENABLE IN SETTINGS</string>
+    <string name="add_languages">ADD LANGUAGES</string>
+    <string name="choose_input_method">CHOOSE INPUT METHOD</string>
+    <string name="choose_theme">CHOOSE THEME</string>
+    <string name="choose_theme_title">Keyboard Themes</string>
+
+    <!-- dialogs -->
+    <string name="error_title_dialog">Error</string>
+    <string name="cancel_text_dialog">Cancel</string>
+
+    <!-- buttons -->
+    <string name="btn_word_ok">OK</string>
+    <string name="btn_word_cancel">CANCEL</string>
+    <string name="btn_word_yes">YES</string>
+    <string name="btn_word_no">NO</string>
+    <string name="btn_word_save">SAVE</string>
+    <string name="btn_word_done">DONE</string>
+    <string name="btn_word_back">BACK</string>
+    <string name="btn_word_skip">SKIP</string>
+    <string name="btn_word_love">LOVE</string>
+
+    <!--Titles-->
+    <string name="quick_reply_title">Quick Reply</string>
+
+    <!--Menus-->
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="next">NEXT</string>
+    <string name="save">SAVE</string>
+
+    <!--Alert-->
+    <string name="shortcut_already_exist">Shortcut already exists</string>
+    <string name="sure_want_to_delete">Are you sure want to delete?</string>
+    <string name="enable_keyboard_first">Please enable keyboard first</string>
+    <string name="empty_field">Field can\'t be empty</string>
+    <string name="format_not_compatible">Wrong Format</string>
+    <string name="delete_confirm">Are you sure to delete?</string>
+    <string name="title_update">Update Version</string>
+    <string name="lbl_update">Update</string>
+    <string name="on_update_needed">Hipe KeyboardApp requires updates to be able to use, update
+        immediately
+    </string>
+    <string name="new_update_released">The latest version of Hipe KeyboardApp is available, update to get
+        the latest features
+    </string>
+    <string name="popup_rating">Do you love Hipe Keyboard?</string>
+    <string name="popup_comment">We hope you give us a review to make this app better</string>
+    <string name="popup_hint">Write comment here</string>
+    <string name="popup_toast_rate">Please rate our app on playstore</string>
+    <string name="popup_toast_comment">Comment must not be empty</string>
+
+    <!--Cek Ongkir-->
+    <string name="weight">Weight(Kg)*</string>
+    <string name="deliver_from">Origin</string>
+    <string name="deliver_to">Destination</string>
+    <string name="weight_greater">Weight must be greater than 0</string>
+    <string name="empty_input_weight">Weight must not be empty</string>
+    <string name="empty_input_deliver_from">Origin must not be empty</string>
+    <string name="empty_input_deliver_to">Destination must not be empty</string>
+    <string name="success_copy_postal_fee">Postal Fee Copied</string>
+    <string name="server_down">The server is busy, please try again later</string>
+
+    <!--general-->
+    <string name="shortcut">Shortcut</string>
+    <string name="description">Description</string>
+    <string name="search_result">Search Result</string>
+    <string name="check_postal_fee">Check Shipping Cost</string>
+    <string name="copy">Copy</string>
+    <string name="err_equation">Silahkan periksa perhitungan anda</string>
+
+    <!--onboarding-->
+    <string name="title_onboarding_1">Keyboard Sakti</string>
+    <string name="desc_onboarding_1">jualan online jadi praktis</string>
+    <string name="title_onboarding_2">Bisa Cek Ongkir</string>
+    <string name="desc_onboarding_2">sambil jualan</string>
+    <string name="title_onboarding_3">Balas Chat Cepat</string>
+    <string name="desc_onboarding_3">tanpa ngetik berulang</string>
+    <string name="title_onboarding_4">Pakai Kalkulator</string>
+    <string name="desc_onboarding_4">sambil chatting</string>
+    <string name="title_onboarding_5">Keyboard Sakti</string>
+    <string name="desc_onboarding_5">jualan online</string>
+
+    <!--intro setting-->
+    <string name="title_setting_1">Hipe Keyboard Keyboard Activation</string>
+    <string name="desc_setting_1">You will be directed to Settings. Mark Hipe Keyboard, so it looks like
+        picture above.
+    </string>
+    <string name="lbl_button_setting_1">Activate Now</string>
+    <string name="title_setting_2">Hipe Keyboard Keyboard Activation</string>
+    <string name="desc_setting_2">Next, tap OK on alert pop-up to allow keyboard from third-party
+        developer. Don\'t worry, Hipe Keyboard won\'t record anything you type.
+    </string>
+    <string name="lbl_button_setting_2">Activate Now</string>
+    <string name="title_setting_3">Set Hipe Keyboard Keyboard as Default</string>
+    <string name="desc_setting_3">Finally. Choose Hipe Keyboard Keyboard as default keyboard in your
+        smartphone. Now, you can start chat with your customer
+    </string>
+    <string name="lbl_button_setting_3">Select Input Method</string>
+
+    <!--Dashboard-->
+    <string-array name="dashboard_menus">
+        <item>Setting</item>
+        <item>Rate Us</item>
+        <item>Tutorial</item>
+        <item>FAQ</item>
+        <item>Chat With Us</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

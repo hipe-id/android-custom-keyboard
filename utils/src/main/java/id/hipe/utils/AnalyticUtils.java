@@ -263,7 +263,7 @@ public class AnalyticUtils {
     }
 
     public void rateLoveApp(String imei, boolean love) {
-        String keyEvent = "love_shopkeepr";
+        String keyEvent = "love_Hipe Keyboard";
         Bundle bundle = new Bundle();
         bundle.putString("imei", imei);
         bundle.putBoolean("love", love);
@@ -272,7 +272,7 @@ public class AnalyticUtils {
     }
 
     public void rateReview(String imei) {
-        String keyEvent = "review_shopkeepr";
+        String keyEvent = "review_Hipe Keyboard";
         Bundle bundle = new Bundle();
         bundle.putString("imei", imei);
         f.logEvent(keyEvent, bundle);

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>force_update_require</key>
+        <value>false</value>
+    </entry>
+
+    <entry>
+        <key>force_update_current_version</key>
+        <value>10000</value>
+    </entry>
+
+    <entry>
+        <key>force_update_store_url</key>
+        <value>https://play.google.com/store/apps/details?id=id.hipe.apps.siomay</value>
+    </entry>
+
+    <entry>
+        <key>force_update_min_version</key>
+        <value>10000</value>
+    </entry>
+
+    <entry>
+        <key>force_update_require_debug</key>
+        <value>false</value>
+    </entry>
+
+    <entry>
+        <key>force_update_current_version_debug</key>
+        <value>10000</value>
+    </entry>
+
+
+    <entry>
+        <key>force_update_min_version_debug</key>
+        <value>10000</value>
+    </entry>
+
+</defaultsMap>

@@ -8,7 +8,7 @@ import android.util.AttributeSet;
 /**
  * Created by Agus on 1/3/17.
  */
-public class TypefacedTextView extends android.support.v7.widget.AppCompatTextView {
+public class TypefacedTextView extends androidx.appcompat.widget.AppCompatTextView {
 
     public TypefacedTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
