@@ -48,7 +48,7 @@ public class CalculatorView extends LinearLayout {
 
     private void initViews() {
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.zuragan_calculator_dark_view, this, true);
+        View view = inflater.inflate(R.layout.hipe_calculator_dark_view, this, true);
         ButterKnife.bind(view);
     }
 

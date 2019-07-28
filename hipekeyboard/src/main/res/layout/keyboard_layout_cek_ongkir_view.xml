@@ -4,12 +4,12 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-    <com.zuragan.Hipe Keyboard.view.keyboard.ceckOngkir.CekOngkirView
+    <id.hipe.keyboard.ceckOngkir.CekOngkirView
                       android:id="@+id/cek_resi_view"
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"/>
 
-    <com.zuragan.Hipe Keyboard.view.keyboard.LatinKeyboardView
+    <id.hipe.keyboard.LatinKeyboardView
                       android:id="@+id/keyboard"
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"

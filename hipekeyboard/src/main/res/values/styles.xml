@@ -8,15 +8,15 @@
     <!--<item name="colorAccent">@color/colorAccent</item>-->
     <!--</style>-->
 
-    <style name="TextAppearance.Zuragan" parent="TextAppearance.AppCompat">
+    <style name="TextAppearance.Hipe" parent="TextAppearance.AppCompat">
         <item name="android:textColor">@drawable/selector_textinput_view</item>
         <item name="android:textSize">12sp</item>
     </style>
 
-    <style name="Base.Theme.Zuragan.blue" parent="Base.Theme.Zuragan"/>
+    <style name="Base.Theme.Hipe.blue" parent="Base.Theme.Hipe"/>
 
 
-    <style name="Base.Theme.Zuragan" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+    <style name="Base.Theme.Hipe" parent="Base.Theme.AppCompat.Light.DarkActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="colorPrimary">@color/color_primary_light</item>

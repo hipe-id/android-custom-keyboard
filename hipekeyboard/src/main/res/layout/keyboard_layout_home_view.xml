@@ -6,32 +6,32 @@
               android:gravity="bottom"
               android:orientation="vertical">
 
-    <com.zuragan.Hipe Keyboard.view.keyboard.calculator.CalculatorView
-                      android:id="@+id/zuragan_calculator_view"
+    <id.hipe.keyboard.calculator.CalculatorView
+            android:id="@+id/hipe_calculator_view"
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:visibility="gone"/>
 
-    <com.zuragan.Hipe Keyboard.view.keyboard.autotext.AutoTextSuggestionView
-                      android:id="@+id/zuragan_autotext_suggestion"
+    <id.hipe.keyboard.autotext.AutoTextSuggestionView
+            android:id="@+id/hipe_autotext_suggestion"
                       android:layout_width="match_parent"
                       android:layout_height="@dimen/toolbar_menu_height"
                       android:background="#3B3B43"
                       android:visibility="gone"/>
 
-    <com.zuragan.Hipe Keyboard.view.keyboard.autotext.AutoTextSettingView
-                      android:id="@+id/zuragan_autotext_setting"
+    <id.hipe.keyboard.autotext.AutoTextSettingView
+            android:id="@+id/hipe_autotext_setting"
                       android:layout_width="match_parent"
                       android:layout_height="match_parent"
                       android:visibility="gone"/>
 
-    <com.zuragan.Hipe Keyboard.view.keyboard.autotext.AutoTextAddView
-                      android:id="@+id/zuragan_autotext_add"
+    <id.hipe.keyboard.autotext.AutoTextAddView
+            android:id="@+id/hipe_autotext_add"
                       android:layout_width="match_parent"
                       android:layout_height="match_parent"
                       android:visibility="gone"/>
 
-    <com.zuragan.Hipe Keyboard.view.keyboard.ceckOngkir.CekOngkirView
+    <id.hipe.keyboard.ceckOngkir.CekOngkirView
                       android:id="@+id/check_ongkir"
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
 
     <include
             android:id="@+id/check_ongkir_view"
-            layout="@layout/zuragan_cek_ongkir_view"
+            layout="@layout/hipe_cek_ongkir_view"
             android:visibility="gone"/>
 
 
@@ -99,7 +99,7 @@
 
     </LinearLayout>
 
-    <com.zuragan.Hipe Keyboard.view.keyboard.LatinKeyboardView
+    <id.hipe.keyboard.LatinKeyboardView
                       android:id="@+id/keyboard"
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"

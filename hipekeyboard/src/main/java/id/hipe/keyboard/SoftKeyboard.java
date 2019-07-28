@@ -464,7 +464,7 @@ public class SoftKeyboard extends InputMethodService
 
         //initial view calculator
         calculatorView = new CalculatorView(this);
-        calculatorView = view.findViewById(R.id.zuragan_calculator_view);
+        calculatorView = view.findViewById(R.id.hipe_calculator_view);
         toolbarHomeKeyboard = view.findViewById(R.id.view_toolbar_keyboard_home_view);
 
         //initial view dasboard
