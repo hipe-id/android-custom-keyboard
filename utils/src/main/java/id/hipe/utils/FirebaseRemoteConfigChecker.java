@@ -1,11 +1,11 @@
 package id.hipe.utils;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import timber.log.Timber;
 
-import static com.zuragan.shopkeepr.utility.StringUtils.getAppVersion;
+import static id.hipe.utils.StringUtils.getAppVersion;
 
 /**
  * Created by

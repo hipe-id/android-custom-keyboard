@@ -10,7 +10,7 @@ import timber.log.Timber;
 
 public class PreferenceUtils {
 
-    public static final String PREF_NAME = "shopkeepr";
+    public static final String PREF_NAME = "Hipe Keyboard";
     public static final String TOKEN = "token";
     public static final String REFRESH_TOKEN = "refresh_token";
     public static final String IS_LOGIN = "is_login";

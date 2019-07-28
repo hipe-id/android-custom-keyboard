@@ -20,7 +20,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.widget.LinearLayout;
-import com.zuragan.shopkeepr.view.keyboard.inputMethod.InputMethodSettingsFragment;
+import id.hipe.keyboard.inputMethod.InputMethodSettingsFragment;
 
 /**
  * Displays the IME preferences inside the input method setting.

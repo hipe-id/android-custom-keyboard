@@ -8,9 +8,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.view.View;
 import android.widget.Toast;
-import com.zuragan.shopkeepr.utility.AnalyticUtils;
-import com.zuragan.shopkeepr.utility.DialogFactory;
-import com.zuragan.shopkeepr.utility.PreferenceUtils;
+import id.hipe.utils.AnalyticUtils;
+import id.hipe.utils.DialogFactory;
+import id.hipe.utils.PreferenceUtils;
 
 /**
  * Created by Dika Putra on 12/07/18.

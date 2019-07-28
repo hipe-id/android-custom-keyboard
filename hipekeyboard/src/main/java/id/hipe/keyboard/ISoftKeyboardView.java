@@ -1,6 +1,6 @@
 package id.hipe.keyboard;
 
-import com.zuragan.shopkeepr.base.BaseView;
+import id.hipe.base.BaseView;
 
 /**
  * Created by

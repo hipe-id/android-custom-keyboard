@@ -9,8 +9,8 @@ import android.util.AttributeSet;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.view.inputmethod.InputMethodSubtype;
-import com.zuragan.shopkeepr.utility.AnalyticUtils;
-import com.zuragan.shopkeepr.utility.PreferenceUtils;
+import id.hipe.utils.AnalyticUtils;
+import id.hipe.utils.PreferenceUtils;
 import timber.log.Timber;
 
 import java.util.List;

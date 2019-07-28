@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
@@ -12,11 +11,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.appcompat.app.AlertDialog;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import com.zuragan.shopkeepr.base.BaseActivity;
-import com.zuragan.shopkeepr.utility.FirebaseRemoteConfigChecker;
+import id.hipe.base.BaseActivity;
+import id.hipe.utils.FirebaseRemoteConfigChecker;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-apply plugin: 'com.android.library'
+apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 29
@@ -6,7 +6,7 @@ android {
 
 
     defaultConfig {
-        minSdkVersion 15
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -22,13 +22,91 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+    }
+}
+
+ext {
+    androidSupportLibVersion = "27.1.1"
+    gsonLibVersion = "2.8.1"
+    okhttpLibVersion = "3.8.1"
+    retrofit2LibVersion = "2.3.0"
+    rxandroidLibVersion = "2.0.1"
+    rxjavaLibVersion = "2.1.2"
+    firebase = "16.0.0"
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    implementation project(':utils')
+
     implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    implementation "io.reactivex.rxjava2:rxjava:${rxjavaLibVersion}"
+    implementation "io.reactivex.rxjava2:rxandroid:${rxandroidLibVersion}"
+
+    implementation "com.google.code.gson:gson:${gsonLibVersion}"
+    implementation "com.squareup.okhttp3:okhttp:${okhttpLibVersion}"
+    implementation "com.squareup.retrofit2:retrofit:${retrofit2LibVersion}"
+//    implementation "com.squareup.retrofit2:converter-gson:${retrofit2LibVersion}"
+//    implementation "com.squareup.retrofit2:adapter-rxjava2:${retrofit2LibVersion}"
+
+    implementation 'com.jakewharton.timber:timber:4.5.1'
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
+
+//dependencies {
+//    configurations {
+//        all*.exclude group: 'com.android.support', module: 'support-v13'
+//    }
+//    implementation fileTree(include: ['*.jar'], dir: 'libs')
+//    testImplementation 'junit:junit:4.12'
+//    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+//    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+//    implementation "com.android.support:design:${androidSupportLibVersion}"
+//    implementation "com.android.support:cardview-v7:${androidSupportLibVersion}"
+//    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+//    implementation 'org.mozilla:rhino:1.7.10'
+//    implementation 'com.google.dagger:dagger-android:2.11'
+//    implementation 'com.google.dagger:dagger-android-support:2.11'
+//    annotationProcessor 'com.google.dagger:dagger-android-processor:2.11'
+//    annotationProcessor "com.google.dagger:dagger-compiler:2.11"
+//
+//    implementation "com.squareup.okhttp3:logging-interceptor:${okhttpLibVersion}"
+//    implementation "com.squareup.retrofit2:retrofit-mock:${retrofit2LibVersion}"
+//    implementation 'io.paperdb:paperdb:2.5'
+//    implementation 'me.relex:circleindicator:1.2.2@aar'
+//    implementation 'net.danlew:android.joda:2.9.2'
+//    implementation 'com.github.bumptech.glide:glide:4.6.1'
+//    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+//    implementation 'com.github.bumptech.glide:okhttp3-integration:4.6.1'
+//    implementation 'com.android.support:multidex:1.0.3'
+//    implementation 'android.arch.lifecycle:extensions:1.1.1'
+//    implementation 'android.arch.persistence.room:runtime:1.1.1'
+//    implementation 'android.arch.persistence.room:rxjava2:1.1.1'
+//    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+//    //material dialog
+//    implementation('com.afollestad.material-dialogs:core:0.9.4.7') {
+//        transitive = true
+//    }
+//    implementation('com.afollestad.material-dialogs:commons:0.9.4.7') {
+//        transitive = true
+//    }
+//    implementation('com.mikepenz:materialdrawer:5.6.0@aar') {
+//        transitive = true
+//    }
+//}

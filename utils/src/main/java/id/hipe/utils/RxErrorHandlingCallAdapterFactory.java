@@ -1,9 +1,7 @@
 package id.hipe.utils;
 
-import android.support.annotation.NonNull;
-import io.reactivex.*;
+import androidx.annotation.NonNull;
 import io.reactivex.functions.Function;
-import retrofit2.*;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 import java.io.IOException;
