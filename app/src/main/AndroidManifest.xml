@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="id.hipe.customkeyboard">
+    xmlns:tools="http://schemas.android.com/tools" package="id.hipe.customkeyboard">
 
-    <application android:label="@string/ime_name">
+    <application android:label="@string/ime_name" tools:ignore="GoogleAppIndexingWarning"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.AppCompat"
+        android:supportsRtl="true">
         <activity android:name="id.hipe.sampleapp.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
