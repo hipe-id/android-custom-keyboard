@@ -20,7 +20,7 @@
  * Project.
  */
 
-package id.android.inputmethodcommon;
+package id.hipe.inputmethodcommon;
 
 import android.graphics.drawable.Drawable;
 

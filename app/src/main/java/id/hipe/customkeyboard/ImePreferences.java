@@ -20,7 +20,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 
-import id.android.inputmethodcommon.InputMethodSettingsFragment;
+import id.hipe.inputmethodcommon.InputMethodSettingsFragment;
 
 /**
  * Displays the IME preferences inside the input method setting.
